@@ -39,7 +39,7 @@ jobs:
           
       - name: cp angular build to container
         run: |
-          docker cp dist/.  serving_base:/usr/local/apache2/htdocs
+          docker cp build/.  serving_base:/usr/local/apache2/htdocs
           
       - name: Build the custom Docker image
         run: docker commit --change "ENV MODEL_NAME ${{secrets.MODEL_NAME}}" serving_base ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME}}:${{github.sha}}
