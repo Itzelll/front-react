@@ -8,7 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Itzel Mendez Martinez 
-          - S20006761 -
+          <br>- S20006761 -</br>
         </p>
         <a
           className="App-link"
