@@ -1,3 +1,5 @@
+import home from '../img/home.png';
+
 export default function Characters(props) {
     const { characters, setCharacters } = props;
     const resetCharacters = () => {
@@ -7,7 +9,9 @@ export default function Characters(props) {
     return(
         <div className="characters">
             <h1>Personajes</h1>
-            <span className="back-home" onClick={resetCharacters}>Volver al home</span>
+            <span className="back-home" onClick={resetCharacters}>
+                <img src={home} alt="home" className='icon'/> 
+                <p>Volver</p></span>
             <div className="container-characters">
                 {characters.map((character, index) => (
                     <div className="character-container" key={index}>
@@ -41,7 +45,9 @@ export default function Characters(props) {
                     </div>
                 ))} 
             </div>
-            <span className = "back-home" onClick={resetCharacters}>Volver al home</span>
+            <span className = "back-home" onClick={resetCharacters}>
+                <img src={home} alt="home" className='icon'/> 
+                <p>Volver</p></span>
         </div>
     );
 
